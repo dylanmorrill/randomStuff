@@ -21,7 +21,7 @@ public class helpingNkbk0108 {
                                                         LIMIT 1][0].Name;
     
     @AuraEnabled
-    public static string updateQuote(SBQQ__Quote__c quote ){
+    public static string updateQuote(SBQQ__Quote__c quote){
         String result='';
         
         if (PROFILES_RESTRICT_TO_DRAFT.contains(CURRENT_USER_PROFILE) 
@@ -30,6 +30,7 @@ public class helpingNkbk0108 {
         }else{
             quote.SBQQ__Status__c = DRAFT_STATUS;
             result = DRAFT_STATUS_CHANGE_SUCCESS;
+            update quote;
         }
         
         return result;
