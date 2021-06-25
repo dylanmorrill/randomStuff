@@ -25,7 +25,7 @@ public class helpingNkbk0108 {
         String result='';
         
         if (PROFILES_RESTRICT_TO_DRAFT.contains(CURRENT_USER_PROFILE) 
-            || STATUSES_RESTRICT_TO_DRAFT.contains(quote.SBQQ__Status__c)){
+            && STATUSES_RESTRICT_TO_DRAFT.contains(quote.SBQQ__Status__c)){
             result = DRAFT_STATUS_CHANGE_ERROR;
         }else{
             quote.SBQQ__Status__c = DRAFT_STATUS;
